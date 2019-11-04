@@ -1,0 +1,324 @@
+<resources>
+    <string name="app_name">Vaishnav Vivaah</string>
+
+    <string-array name="Prefix">
+        <item>Prefix</item>
+        <item>Miss.</item>
+        <item>Mr.</item>
+        <item>Mrs.</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+
+      <string-array name="marit">
+        <item>Marital Status</item>
+        <item>Unmarried</item>
+        <item>Divorcee</item>
+        <item>Awaiting for Divorce</item>
+    </string-array>
+
+    <string-array name="profilefor">
+        <item>Profile For</item>
+        <item>MySelf</item>
+        <item>Son</item>
+        <item>Daughter</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Relative</item>
+    </string-array>
+
+
+    <string-array name="income">
+        <item>Select Income Annualy</item>
+        <item>1-3 Lac</item>
+        <item>3-5 Lac</item>
+        <item>5-10 Lac</item>
+        <item>More than 10 Lac</item>
+    </string-array>
+
+
+    <string-array name="education">
+        <item>Education</item>
+        <item>SSC</item>
+        <item>HSC</item>
+        <item>Aeronautical Engineering</item>
+        <item>Aviation Degree</item>
+        <item>B.A</item>
+        <item>B.A.M.S</item>
+        <item>B.Arch</item>
+        <item>B.Com</item>
+        <item>B.Ed</item>
+        <item>B.L</item>
+        <item>B.M.M</item>
+        <item>B.Phil</item>
+        <item>B.Plan</item>
+        <item>B.S.W</item>
+        <item>B.Sc</item>
+        <item>B.Sc IT/Computer Science</item>
+        <item>B.Sc. Nursing</item>
+        <item>B.Tech</item>
+        <item>Bachelors–Legal</item>
+        <item>Bachelors–Management/Others</item>
+        <item>Bachelors-Arts/Science/Commerce/Others</item>
+        <item>BBA</item>
+        <item>BCA</item>
+        <item>BE</item>
+        <item>BFA</item>
+        <item>BFM</item>
+        <item>BFT</item>
+        <item>BGL</item>
+        <item>BHM</item>
+        <item>BHMS</item>
+        <item>BUMS</item>
+        <item>BVSc</item>
+        <item>CA</item>
+        <item>CFA</item>
+        <item>CS</item>
+        <item>Higher Secondary School/High School</item>
+        <item>IAS</item>
+        <item>ICWA</item>
+        <item>IES</item>
+        <item>IFS</item>
+        <item>IPS</item>
+        <item>IRS</item>
+        <item>LL.M</item>
+        <item>LLB</item>
+        <item>M.Arch</item>
+        <item>M.L</item>
+        <item>M.Pharm</item>
+        <item>M.Phil</item>
+        <item>M.S.</item>
+        <item>M.Sc</item>
+        <item>M.Sc. IT</item>
+        <item>Masters–Arts/Science/Commerce/Others</item>
+        <item>Masters–Legal/Others</item>
+        <item>Masters-Management/Others</item>
+        <item>Masters-Medicine-General/Dental/Surgeon/Others</item>
+        <item>Masters-Engineering/Computers/Others</item>
+        <item>MBA</item>
+        <item>MBBS</item>
+        <item>MCA</item>
+        <item>"MD/MS(Medical)</item>
+        <item>MDS</item>
+        <item>ME</item>
+        <item>MFIM(Financial Management)</item>
+        <item>MHM(Hotel Management)</item>
+        <item>MHRM(Human Resource Management)</item>
+        <item>MLIS</item>
+        <item>MPT</item>
+        <item>MSW</item>
+        <item>MVSc</item>
+        <item>Other Bachelor Degree in Arts/Science/Commerce</item>
+        <item>Other Bachelor Degree in Engineering/Computers</item>
+        <item>Other Bachelor Degree in Legal</item>
+        <item>Other Bachelor Degree in Management</item>
+        <item>Other Bachelor Degree in Medicine</item>
+        <item>Other Degree in Finance</item>
+        <item>Other Degree in Service</item>
+        <item>Other Master Degree in Arts/Science/Commerce</item>
+        <item>Other Master Degree in Legal</item>
+        <item>Other Master Degree in Medicine</item>
+        <item>Other Masters Degree in Engineering / Computers</item>
+        <item>PGDCA</item>
+        <item>Ph.D</item>
+    </string-array>
+
+
+    <string-array name="gotra">
+        <item>गोत्र</item>
+        <item>अग्रावत</item>
+        <item>अनन्तानन्दी</item>
+        <item>अनुभवानन्दी</item>
+        <item>भावानंदी</item>
+        <item>सुखानंदी</item>
+        <item>सुरसरानंदी</item>
+        <item>अलखानन्दी</item>
+        <item>कर्मचन्दी</item>
+        <item>कालू जी</item>
+        <item>कीलावत</item>
+        <item>कुबावत</item>
+        <item>खोजी जी</item>
+        <item>जंगीजी</item>
+        <item>लाहारामी</item>
+        <item>टीलावत</item>
+        <item>तनतुलसी</item>
+        <item>दिवाकर</item>
+        <item>देवमुरारी</item>
+        <item>धूंध्यानन्दी</item>
+        <item>नरहर्यानन्दी</item>
+        <item>नाभाजी</item>
+        <item>पीपावत</item>
+        <item>पूर्ण बैराठी</item>
+        <item>भगवन्ननारायणी</item>
+        <item>भड़गी</item>
+        <item>मलूकिया</item>
+        <item>योगानन्दी</item>
+        <item>रामकबीर</item>
+        <item>राधवचेतनी</item>
+        <item>रामथंमणा</item>
+        <item>रामरामायणी</item>
+        <item>रामरावली</item>
+        <item>रामरंगी</item>
+        <item>लालतुरंगी</item>
+        <item>सुखानन्दी</item>
+        <item>सुरसुरानन्दी</item>
+        <item>हठीनारायणी</item>
+        <item>हनुमानी</item>
+        <item>केशवव्याणी</item>
+        <item>घमंडी</item>
+        <item>चित्रानागा</item>
+        <item>चर्तुभुजी</item>
+        <item>तत्ववेदी</item>
+        <item>परशुरामी</item>
+        <item>मधवकाणी</item>>
+        <item>राधावल्लभी</item>
+        <item>लपरागोपाली</item>
+        <item>वीरमत्यागी</item>
+        <item>शोभावत</item>
+        <item>ऋषिकेेषवी</item>
+        <item>गोकुलानन्दी</item>
+        <item>विट्ठलानन्दी</item>
+        <item>नित्यानन्दी</item>
+        <item>श्यामानन्दी</item>
+
+    </string-array>
+
+
+    <string-array name="occupasion">
+        <item>occupation</item>
+        <item>Accounts/Finance Professional</item>
+        <item>Administrative Professional</item>
+        <item>Advertising / PR Professional</item>
+        <item>Agriculture &amp; Farming Professional</item>
+        <item>Air force</item>
+        <item>Air Hostess</item>
+        <item>Airline Professional</item>
+        <item>Architect</item>
+        <item>Army</item>
+        <item>Arts &amp; Craftsman</item>
+        <item>Auditor</item>
+        <item>Banking Service Professional</item>
+        <item>Beautician</item>
+        <item>Business Analyst</item>
+        <item>Business Owner / Entrepreneur</item>
+        <item>Charted Accountant</item>
+        <item>Civil Services (IAS/IPS/IRS/IES/IFS)</item>
+        <item>Clerk</item>
+        <item>Company Secretary</item>
+        <item>Consultant</item>
+        <item>Customer Care Professional</item>
+        <item>CXO / President , Director ,Chairman</item>
+        <item>Designer</item>
+        <item>Doctor</item>
+        <item>Education Professional</item>
+        <item>Engineer – Non IT</item>
+        <item>Engineer</item>
+        <item>Entertainment Professional</item>
+        <item>Executive</item>
+        <item>Fashion Designer</item>
+        <item>Financial Accountant</item>
+        <item>Financial Analyst / Planning</item>
+        <item>Hardware Professional</item>
+        <item>Health Care Professional</item>
+        <item>Hotel / Hospitality Professional</item>
+        <item>Human Resource Professional</item>
+        <item>Interior Designer</item>
+        <item>Journalist</item>
+        <item>Law Enforcement Officer</item>
+        <item>Lawyer &amp; Legal Professional</item>
+        <item>Librarian</item>
+        <item>Manager</item>
+        <item>Mariner / Merchant Navy</item>
+        <item>Marketing Professional</item>
+        <item>Media Professional</item>
+        <item>Navy</item>
+        <item>New occupation</item>
+        <item>Nurses</item>
+        <item>Officer</item>
+        <item>Pilot</item>
+        <item>Professor / Lecturer</item>
+        <item>ales Professional</item>
+        <item>Scientist / Researcher</item>
+        <item>Social Worker</item>
+        <item>Software Developer</item>
+        <item>Sportsman</item>
+        <item>Teacher</item>
+        <item>Teaching / Academician</item>
+        <item>Technician</item>
+        <item>Test Occupation</item>
+        <item>Goverment Employee</item>
+        <item>Home Maker</item>
+    </string-array>
+
+    <string-array name="motoccupasion">
+        <item>occupation</item>
+        <item>Accounts/Finance Professional</item>
+        <item>Administrative Professional</item>
+        <item>Advertising / PR Professional</item>
+        <item>Agriculture &amp; Farming Professional</item>
+        <item>Air force</item>
+        <item>Air Hostess</item>
+        <item>Airline Professional</item>
+        <item>Architect</item>
+        <item>Army</item>
+        <item>Arts &amp; Craftsman</item>
+        <item>Auditor</item>
+        <item>Banking Service Professional</item>
+        <item>Beautician</item>
+        <item>Business Analyst</item>
+        <item>Business Owner / Entrepreneur</item>
+        <item>Charted Accountant</item>
+        <item>Civil Services (IAS/IPS/IRS/IES/IFS)</item>
+        <item>Clerk</item>
+        <item>Company Secretary</item>
+        <item>Consultant</item>
+        <item>Customer Care Professional</item>
+        <item>CXO / President , Director ,Chairman</item>
+        <item>Designer</item>
+        <item>Doctor</item>
+        <item>Education Professional</item>
+        <item>Engineer – Non IT</item>
+        <item>Engineer</item>
+        <item>Entertainment Professional</item>
+        <item>Executive</item>
+        <item>Fashion Designer</item>
+        <item>Financial Accountant</item>
+        <item>Financial Analyst / Planning</item>
+        <item>Hardware Professional</item>
+        <item>Health Care Professional</item>
+        <item>Hotel / Hospitality Professional</item>
+        <item>Human Resource Professional</item>
+        <item>Interior Designer</item>
+        <item>Journalist</item>
+        <item>Law Enforcement Officer</item>
+        <item>Lawyer &amp; Legal Professional</item>
+        <item>Librarian</item>
+        <item>Manager</item>
+        <item>Mariner / Merchant Navy</item>
+        <item>Marketing Professional</item>
+        <item>Media Professional</item>
+        <item>Navy</item>
+        <item>New occupation</item>
+        <item>Nurses</item>
+        <item>Officer</item>
+        <item>Pilot</item>
+        <item>Professor / Lecturer</item>
+        <item>ales Professional</item>
+        <item>Scientist / Researcher</item>
+        <item>Social Worker</item>
+        <item>Software Developer</item>
+        <item>Sportsman</item>
+        <item>Teacher</item>
+        <item>Teaching / Academician</item>
+        <item>Technician</item>
+        <item>Test Occupation</item>
+        <item>Goverment Employee</item>
+        <item>House Wife</item>
+    </string-array>
+
+</resources>

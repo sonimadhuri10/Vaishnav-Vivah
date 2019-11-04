@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="3dp"
+            android:padding="3dp"
+            android:elevation="10dp"
+            card_view:contentPadding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="165dp"
+                    android:background="@drawable/man"
+                    android:layout_height="180dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:text="Madhuri Soni"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:layout_height="wrap_content" />
+                        <LinearLayout
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="Age - "
+                                android:textSize="14dp"
+                                android:textStyle="normal"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/tvAge"
+                                android:layout_width="wrap_content"
+                                android:text=""
+                                android:textSize="14dp"
+                                android:textStyle="normal"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="Gender - "
+                                android:textSize="14dp"
+                                android:textStyle="normal"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/tvGender"
+                                android:layout_width="wrap_content"
+                                android:text=""
+                                android:textSize="14dp"
+                                android:textStyle="normal"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="Dob - "
+                                android:textSize="14dp"
+                                android:textStyle="normal"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/tvDob"
+                                android:layout_width="wrap_content"
+                                android:text=""
+                                android:textSize="14dp"
+                                android:textStyle="normal"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="गोत्र - "
+                                android:textSize="14dp"
+                                android:textStyle="normal"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/tvGotra"
+                                android:layout_width="wrap_content"
+                                android:text=""
+                                android:textSize="14dp"
+                                android:textStyle="normal"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="3dp"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="Status - "
+                                android:textSize="14dp"
+                                android:textStyle="normal"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/tvStatus"
+                                android:layout_width="wrap_content"
+                                android:text=""
+                                android:textSize="14dp"
+                                android:textStyle="normal"
+                                android:textColor="#000"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Family Details :"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="3dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="Father's Name -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvFathrer"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="Father's Occupation -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvFatherOccu"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="Mother's Name -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvMother"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="Mother's Occupation -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvMotherOccu"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Other Details :"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="3dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="Education -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvEducation"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="Occupation -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvOccupation"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="Income -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvIncome"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Contact Details :"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="3dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="Contact No. -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvMobile"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="Email -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvEmail"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Address Details :"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="3dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="Address -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvAddress"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="City -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvCity"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="3dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:text="State -"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:textColor="#645E5E"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvState"
+                    android:layout_width="0dp"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:singleLine="true"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/allImg"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="For view all images click here"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

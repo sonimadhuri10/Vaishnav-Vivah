@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "895768754222",
+    "firebase_url": "https://vaishnav-vivah.firebaseio.com",
+    "project_id": "vaishnav-vivah",
+    "storage_bucket": "vaishnav-vivah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895768754222:android:c3524f782adf7d07",
+        "android_client_info": {
+          "package_name": "com.ziasy.vaishnavvivah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895768754222-50slf6trbmd6monoidqf76n8m9099kia.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ziasy.vaishnavvivah",
+            "certificate_hash": "ff4f2100e47cb63701c7ba04dc5491922a37f190"
+          }
+        },
+        {
+          "client_id": "895768754222-l3k3ki3g01h6d0fccl0ots0s5735vqd3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAarGLmFBj5U3LakyelDjMklGVl8f1SYpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895768754222-l3k3ki3g01h6d0fccl0ots0s5735vqd3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

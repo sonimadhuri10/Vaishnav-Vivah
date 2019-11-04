@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ziasy.vaishnavvivah">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+   <!-- <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon2"
+        android:label="@string/app_name"
+        android:focusable="true"
+        android:usesCleartextTraffic="true"
+        android:focusableInTouchMode="true"
+        android:roundIcon="@drawable/icon2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme1">
+        <activity android:name="com.ziasy.vaishnavvivah.activity.splashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.checksum"/>
+
+         <activity android:name="com.ziasy.vaishnavvivah.MainActivity"
+             android:screenOrientation="portrait"
+         android:theme="@style/AppTheme"/>
+
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.frontActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.loginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"/>
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.signupActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.OtpActivity"
+            android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"/>
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.Forgot"
+            android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"/>
+
+
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.Forgot_password"
+            android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"/>
+
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.ViewFulProfile"
+            android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"/>
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.UserSubscription"
+            android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"/>
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.ResetPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.AboutUs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+
+        <activity android:name=".activity.GridGalleryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".activity.AllImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+
+        <activity android:name=".activity.ViewImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+
+        <activity android:name="com.ziasy.vaishnavvivah.activity.NotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="com.ziasy.vaishnavvivah.fragment.Filter"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|keyboard"/>
+
+        <service android:name=".FCM.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+
+            </intent-filter>
+        </service>
+
+        <service android:name=".FCM.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+
+    </application>
+
+</manifest>
