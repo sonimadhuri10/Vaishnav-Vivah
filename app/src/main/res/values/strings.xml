@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Vaishnav Vivaah</string>
 
-    <string-array name="Prefix">
+    <string-array name="Prefix" >
         <item>Prefix</item>
         <item>Miss.</item>
         <item>Mr.</item>
@@ -15,7 +15,7 @@
     </string-array>
 
 
-      <string-array name="marit">
+    <string-array name="marit">
         <item>Marital Status</item>
         <item>Unmarried</item>
         <item>Divorcee</item>
@@ -320,5 +320,8 @@
         <item>Goverment Employee</item>
         <item>House Wife</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

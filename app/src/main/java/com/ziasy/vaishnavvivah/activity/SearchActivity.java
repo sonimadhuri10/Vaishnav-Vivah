@@ -72,7 +72,9 @@ public class SearchActivity extends AppCompatActivity  implements View.OnClickLi
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Search profiles");
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // hide the current title from the Toolbar
+        //getSupportActionBar().setTitle("");
+        getSupportActionBar().setIcon(R.drawable.logo6);
 
         add(sd.getGENDER(),sd.getKEY_ID());
         imgGo.setOnClickListener(this);

@@ -56,7 +56,9 @@ public class ResetPassword extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Change Password");
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // hide the current title from the Toolbar
+        //getSupportActionBar().setTitle("");
+        getSupportActionBar().setIcon(R.drawable.logo6);
 
 
         btnChange.setOnClickListener(new View.OnClickListener() {

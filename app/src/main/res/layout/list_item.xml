@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_gravity="center_vertical"
-        android:textColor="@color/colorAccent"
+        android:textColor="#fff"
         android:textSize="14sp" />
 
 </LinearLayout>

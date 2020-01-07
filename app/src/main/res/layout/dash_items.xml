@@ -3,10 +3,10 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_width="165dp"
+    android:layout_width="130dp"
+    android:scrollbars="none"
     android:layout_gravity="center"
-    android:layout_height="wrap_content">
-
+    android:layout_height="220dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
@@ -16,67 +16,154 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/cornercard"
         android:padding="3dp"
+        android:scrollbars="none"
         android:elevation="10dp"
-        card_view:contentPadding="10dp">
+        card_view:cardCornerRadius="19dp"
+        card_view:cardPreventCornerOverlap = "false">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_height="wrap_content">
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="165dp"
+                android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:scaleType="fitXY"
-                android:layout_height="200dp" />
+                android:layout_height="110dp" />
 
             <TextView
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="90dp"
                 android:id="@+id/tvName"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:singleLine="true"
                 android:gravity="center"
-                android:layout_gravity="left"
-                android:textSize="14dp"
+                android:background="@drawable/gradienttext"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_gravity="bottom"
+                android:textSize="12dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="left">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="age"
+                    android:textSize="10dp"
+                    android:id="@+id/setege"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="gotra"
+                    android:textSize="10dp"
+                    android:id="@+id/setrel"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="location"
+                    android:textSize="10dp"
+                    android:id="@+id/setloc"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
+               android:paddingBottom="10dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
                 android:layout_height="wrap_content">
+
+
                 <TextView
-                    android:layout_marginTop="4dp"
+
                     android:id="@+id/tvView"
                     android:text="View"
-                    android:background="@color/colorAccent"
-                    android:textColor="#fff"
-                    android:textSize="14dp"
+                    android:background="@drawable/rectangletext"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12dp"
                     android:gravity="center"
                     android:layout_margin="1dp"
                     android:layout_gravity="center"
-                    android:padding="2dp"
+                    android:paddingBottom="3dp"
                     android:layout_weight="0.5"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/likelayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/rectangletext">
+
+                <TextView
+                    android:id="@+id/tvlike"
+                    android:text="Like"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:layout_margin="1dp"
+                    android:layout_gravity="center"
+                    android:paddingBottom="3dp"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
-                <TextView
-                    android:layout_marginTop="4dp"
-                    android:id="@+id/tvlike"
-                    android:text="like"
-                    android:background="@color/colorAccent"
-                    android:textColor="#fff"
-                    android:textSize="14dp"
-                    android:gravity="center"
-                    android:layout_margin="1dp"
-                    android:layout_gravity="center"
-                    android:padding="2dp"
-                    android:layout_weight="0.5"
+
+
+</LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/likedlayout"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/rectangletextliked">
+
+                    <TextView
+                        android:id="@+id/tvliked"
+                        android:text="Liked"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12dp"
+                        android:gravity="center"
+                        android:layout_margin="1dp"
+                        android:layout_gravity="center"
+                        android:paddingBottom="3dp"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
 
 
             </LinearLayout>

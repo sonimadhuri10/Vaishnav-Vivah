@@ -73,7 +73,9 @@ public class GridGalleryActivity extends AppCompatActivity implements View.OnCli
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Gallery");
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // hide the current title from the Toolbar
+        //getSupportActionBar().setTitle("");
+        getSupportActionBar().setIcon(R.drawable.logo6);
 
         view(sd.getKEY_ID());
         circleImageView.setOnClickListener(this);

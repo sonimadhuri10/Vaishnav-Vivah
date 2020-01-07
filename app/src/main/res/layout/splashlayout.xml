@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:focusable="false"
     android:focusableInTouchMode="false"
-    android:background="#FFFFFF"
+    android:background="@drawable/vivahbg"
     android:gravity="center"
     android:orientation="vertical">
 

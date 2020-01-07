@@ -5,5 +5,5 @@
     android:layout_height="wrap_content"
     android:textColor="#948C8C"
     android:singleLine="true"
-    android:textSize="14dp"
+    android:textSize="10dp"
     android:padding="10dp"/>

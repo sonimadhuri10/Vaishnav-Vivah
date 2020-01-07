@@ -33,7 +33,6 @@ import retrofit2.Callback;
 public class loginActivity extends AppCompatActivity  implements View.OnClickListener {
 
     EditText etMobile,etpassword;
-
     TextView tvForgot,tvSignup ;
     Button btnLogin ;
     String mobile = "",password = "",user_id="";
@@ -42,7 +41,6 @@ public class loginActivity extends AppCompatActivity  implements View.OnClickLis
     APIInterface apiInterface;
     SessionManagment sessionManagment ;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -78,9 +76,11 @@ public class loginActivity extends AppCompatActivity  implements View.OnClickLis
             etMobile.setError("Please Enter valid Mobile No.");
         }else if(mobile.matches("[a-zA-Z]+")&& !mobile.matches(emailPattern)){
             etMobile.setError("Please Enter valid Email");
-        }
-        else if(password.isEmpty()){
+        } else if(password.isEmpty()){
             etpassword.setError("Please Enter password");
+        }else if(password.length()<6){
+            etpassword.setError("Please Enter Minimum 6 Character Password");
+
         }else{
          login(mobile,password,sessionManagment.getFCM());
         }
@@ -108,52 +108,38 @@ public class loginActivity extends AppCompatActivity  implements View.OnClickLis
                           Toast.makeText(loginActivity.this, "User Not Register", Toast.LENGTH_SHORT).show();
 
                       }else
-                      if (resource.user.get(0).gender.equals("undefined") && resource.user.get(0).profile_for.equals("undefined")) {
-                          user_id = resource.user.get(0).id;
-                          sessionManagment.setKEY_ID(user_id);
-                          Intent inh = new Intent(loginActivity.this, UserSubscription.class);
-                          startActivity(inh);
-                          finish();
-                      } else if (resource.status.equals("success")) {
-                          user_id = resource.user.get(0).id;
-                          sessionManagment.setKEY_ID(user_id);
-                          sessionManagment.setLOGIN_STATUS("true");
-                          sessionManagment.setGENDER(resource.user.get(0).gender);
-                          sessionManagment.setMOBILE(resource.user.get(0).user_mobile);
-                          sessionManagment.setEMAIL(resource.user.get(0).user_email);
-                          sessionManagment.setLOGOUT_STATUS("false");
-                          Intent ing = new Intent(loginActivity.this, MainActivity.class);
-                          startActivity(ing);
-                          finish();
+                     if (resource.status.equals("success")) {
+                          if (resource.user.get(0).gender.equals("undefined") && resource.user.get(0).profile_for.equals("undefined")) {
+                              user_id = resource.user.get(0).id;
+                              sessionManagment.setKEY_ID(user_id);
+                              Intent inh = new Intent(loginActivity.this, UserSubscription.class);
+                              startActivity(inh);
+                              finish();
+                          } else {
+                              user_id = resource.user.get(0).id;
+                              sessionManagment.setKEY_ID(user_id);
+                              sessionManagment.setLOGIN_STATUS("true");
+                              sessionManagment.setGENDER(resource.user.get(0).gender);
+                              sessionManagment.setMOBILE(resource.user.get(0).user_mobile);
+                              sessionManagment.setEMAIL(resource.user.get(0).user_email);
+                              sessionManagment.setLOGOUT_STATUS("false");
+                              Intent ing = new Intent(loginActivity.this, MainActivity.class);
+                              startActivity(ing);
+                              finish();
+                          }
                       } else if (resource.status.equals("invalide password")) {
-                          Toast.makeText(loginActivity.this, "Password is Incorrect", Toast.LENGTH_SHORT).show();
+                         pd.dismiss();
+
+                         Toast.makeText(loginActivity.this, "Password is Incorrect", Toast.LENGTH_SHORT).show();
                       } else {
-                          Toast.makeText(loginActivity.this, "Something went wrong...", Toast.LENGTH_SHORT).show();
+                         pd.dismiss();
+
+                         Toast.makeText(loginActivity.this, "Something went wrong...", Toast.LENGTH_SHORT).show();
                       }
 
-                    /*  if (resource.status.equals("success"))  {
-                        Toast.makeText(loginActivity.this, "Your otp is "+resource.user.get(0).otp, Toast.LENGTH_SHORT).show();
-                        String user_id = resource.user.get(0).id;
-                        sessionManagment.setKEY_ID(user_id);
-                        sessionManagment.setMOBILE(resource.user.get(0).user_mobile);
-                        sessionManagment.setEMAIL(resource.user.get(0).user_email);
-                        Intent in = new Intent(loginActivity.this, OtpActivity.class);
-                        in.putExtra("otp",resource.user.get(0).otp);
-                        in.putExtra("profile",resource.user.get(0).profile_for);
-                        in.putExtra("gender",resource.user.get(0).gender);
-                        in.putExtra("mother",resource.user.get(0).mother_name);
-                        startActivity(in);
-                        finish();
-                    } else if(resource.status.equals("passwordincorrect")){
-                        Toast.makeText(loginActivity.this, "Password is Incorrect", Toast.LENGTH_SHORT).show();
-
-                    }else {
-                        Toast.makeText(loginActivity.this, "Incorrect User...", Toast.LENGTH_SHORT).show();
-                    }*/
                   }catch (Exception e){
                       pd.dismiss();
                       Toast.makeText(loginActivity.this, "please check your internet connection", Toast.LENGTH_SHORT).show();
-
                   }
                     }
 

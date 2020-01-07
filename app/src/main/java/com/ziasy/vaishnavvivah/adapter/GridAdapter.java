@@ -21,6 +21,7 @@ import com.ziasy.vaishnavvivah.R;
 import com.ziasy.vaishnavvivah.activity.GridGalleryActivity;
 import com.ziasy.vaishnavvivah.activity.ViewFulProfile;
 import com.ziasy.vaishnavvivah.activity.ViewImageActivity;
+import com.ziasy.vaishnavvivah.activity.swipeActivity;
 import com.ziasy.vaishnavvivah.comman.ConnectionDetector;
 import com.ziasy.vaishnavvivah.comman.SessionManagment;
 import com.ziasy.vaishnavvivah.model.ImageModel;
@@ -40,6 +41,7 @@ public class GridAdapter extends ArrayAdapter {
     APIInterface apiInterface;
     ProgressDialog pd;
     DeletInterface deletInterface;
+    ImageView icondelete;
 
     public GridAdapter(Context context, ArrayList<ImageModel.userdetail> al) {
         super(context, R.layout.grid_items, al);
@@ -55,36 +57,42 @@ public class GridAdapter extends ArrayAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder vh = new ViewHolder();
-        int pos = position;
+        final int pos = position;
         final ImageModel.userdetail lm = al.get(pos);
 
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.grid_items, parent, false);
-            vh.tvDelet = (TextView) convertView.findViewById(R.id.tvDelet);
-            vh.tvview = (TextView) convertView.findViewById(R.id.tvView);
+           // vh.tvDelet = (TextView) convertView.findViewById(R.id.tvDelet);
+           // vh.tvview = (TextView) convertView.findViewById(R.id.tvView);
+
             vh.icon = (ImageView) convertView.findViewById(R.id.image);
             convertView.setTag(vh);
         } else {
             vh = (ViewHolder) convertView.getTag();
         }
 
+        icondelete = convertView.findViewById(R.id.tvDelet);
+
+
         Picasso.with(context).load("http://joietouch.com/matrimoney/images/"+lm.img_name).error(R.drawable.man).into(vh.icon);
 
-        vh.tvDelet.setOnClickListener(new View.OnClickListener() {
+        icondelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                     delet(sd.getKEY_ID(),lm.item_id);
             }
         });
 
-        vh.tvview.setOnClickListener(new View.OnClickListener() {
+        vh.icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(context, ViewImageActivity.class);
+                Intent in = new Intent(context, swipeActivity.class);
                 in.putExtra("image",lm.img_name);
+                in.putExtra("pos",String.valueOf(position));
+
                 context.startActivity(in);
             }
         });

@@ -131,6 +131,8 @@ public class signupActivity extends AppCompatActivity {
             etmobile.setError("Please Enter Valid Mobile No.");
         }else if(strPassword.equals("")){
            etpassword.setError("Please Enter password");
+       }else if(strPassword.length()<6){
+           etpassword.setError("Please Enter Minimum 6 Character Password");
        }else{
              signin(strName,strEmail,strMobile,strPassword,imei,sd.getFCM());
         }

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bride"
+    android:background="@drawable/vivahbg"
     android:focusable="false"
     android:focusableInTouchMode="false"
     android:gravity="bottom"
@@ -12,7 +12,7 @@
     android:id="@+id/tvRegister"
     android:layout_marginBottom="10dp"
     android:layout_width="match_parent"
-    android:background="@drawable/pink_border"
+    android:background="@drawable/orange_border"
     android:layout_marginLeft="25dp"
     android:layout_marginRight="25dp"
     android:text="Sign Up Free"
@@ -45,11 +45,11 @@
         android:layout_width="100dp"
         android:text="Login"
         android:textSize="15dp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorOrange"
         android:padding="12dp"
         android:gravity="center"
         android:textStyle="bold"
-        android:background="@drawable/pink_sp_border"
+        android:background="@drawable/orange_sp_border"
         android:layout_height="wrap_content" />
 
 

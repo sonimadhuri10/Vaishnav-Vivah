@@ -22,11 +22,12 @@ public class AboutUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aboutus);
 
-
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("About US");
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // hide the current title from the Toolbar
+        //getSupportActionBar().setTitle("");
+        getSupportActionBar().setIcon(R.drawable.logo6);
 
         web1 = (WebView)findViewById(R.id.web1);
 

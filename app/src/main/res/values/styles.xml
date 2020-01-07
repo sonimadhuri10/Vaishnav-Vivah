@@ -9,7 +9,7 @@
 
     <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorOrange</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorPrimary</item>
     </style>
@@ -19,6 +19,76 @@
     <item name="colorAccent">#000</item>
     <item name="colorControlNormal">#E9D6D6</item>
     </style>
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
 
 
+    <style name="AppBaseThemespinner" parent="android:Theme.Holo">
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppThemespinner" parent="AppBaseThemespinner">
+
+        <!-- For the resting Spinner style -->
+        <item name="android:spinnerItemStyle">
+            @style/spinnerItemStyle
+        </item>
+
+        <!-- For each individual Spinner list item once clicked on -->
+        <item name="android:spinnerDropDownItemStyle">
+            @style/spinnerDropDownItemStyle
+        </item>
+
+    </style>
+
+    <style name="spinnerItemStyle">
+        <item name="android:padding">0dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle">
+        <item name="android:padding">0dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!--<style name="ThemeOverlay.MaterialComponents.MaterialAlertDialog_Background" parent="AppTheme1">
+        &lt;!&ndash; Background Color&ndash;&gt;
+        <item name="android:background">@color/.....</item>
+        &lt;!&ndash; Text Color for title and message &ndash;&gt;
+        &lt;!&ndash; Style for positive button &ndash;&gt;
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        &lt;!&ndash; Style for negative button &ndash;&gt;
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        &lt;!&ndash; text color for the button &ndash;&gt;
+        <item name="android:textColor">@color/colorGreen</item>
+        &lt;!&ndash; Background tint for the button &ndash;&gt;
+        <item name="backgroundTint">@color/colorPrimary</item>
+    </style>
+    <style name="NegativeButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        &lt;!&ndash; text color for the button &ndash;&gt;
+        <item name="android:textColor">@color/.....</item>
+        &lt;!&ndash; Background tint for the button &ndash;&gt;
+        <item name="backgroundTint">@color/bgGrey</item>
+    </style>
+
+    <style name="MyDialogStyle" parent="AppTheme1">
+        <item name="android:buttonBarButtonStyle">@style/MyButtonsStyle</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+
+    <style name="MyButtonsStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+-->
 </resources>
+
+
+

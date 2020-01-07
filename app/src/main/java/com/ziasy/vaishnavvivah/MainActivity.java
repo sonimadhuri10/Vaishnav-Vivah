@@ -9,6 +9,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -17,15 +18,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -76,15 +81,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String imgPath = "http://joietouch.com/matrimoney/images/";
     static String data = null;
     private String fragmentIntent = null;
+    Toolbar toolbar;
+    ImageView imagettool;
 
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         printHashKey(MainActivity.this);
+        imagettool = findViewById(R.id.notification);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+              setSupportActionBar(toolbar);
+
+             // getSupportActionBar().setHomeButtonEnabled(true);
+              //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         container = (LinearLayout) findViewById(R.id.container);
         tvName = (TextView) findViewById(R.id.tvName);
+
         tvEmail = (TextView) findViewById(R.id.tvEmail);
         sd = new SessionManagment(MainActivity.this);
         cd = new ConnectionDetector(this);
@@ -95,15 +112,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         circleImageView = (CircleImageView) findViewById(R.id.prImage);
         data = getIntent().getStringExtra("fragment");
-
-        getSupportActionBar().setHomeButtonEnabled(true);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+       /* getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayUseLogoEnabled(false);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.logo9);
-
-
+        getSupportActionBar().setIcon(R.drawable.logo9);*/
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, new dashboard()).commit();
@@ -116,6 +131,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        imagettool.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inn = new Intent(MainActivity.this, NotificationActivity.class);
+                startActivity(inn);
+            }
+        });
 
 
        fragmentIntent = getIntent().getStringExtra("fragment");
@@ -150,12 +172,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(true);
+       ActionBar actionBar = getSupportActionBar();
+       actionBar.setDisplayHomeAsUpEnabled(true);
+       actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setDisplayUseLogoEnabled(true);
-        actionBar.setIcon(R.drawable.logo9);
+      //  actionBar.setDisplayUseLogoEnabled(true);
+       // actionBar.setIcon(R.drawable.logo9);
+
         actionBar.show();
 
         if (drawerToggle == null) {
@@ -263,7 +286,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case 6:
                         drawerLayout.closeDrawer(Gravity.LEFT);
                         new android.app.AlertDialog.Builder(MainActivity.this)
-                                .setTitle("Exit!")
+                                .setTitle("Signout!")
                                 .setMessage("Are you sure you want to signout?")
                                 .setPositiveButton("Yes",
                                         new DialogInterface.OnClickListener() {
@@ -323,7 +346,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
                     }catch (Exception e){
                         pd.dismiss();
-                        Toast.makeText(MainActivity.this, "please try again... !", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(MainActivity.this, "please try again... !", Toast.LENGTH_SHORT).show();
 
                     }
                 }
@@ -380,11 +403,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }
         switch (item.getItemId()) {
-            case R.id.nautification:
-                Intent inn = new Intent(MainActivity.this, NotificationActivity.class);
-                startActivity(inn);
-                return true;
-            case R.id.logout:
+//            case R.id.nautification:
+//                Intent inn = new Intent(MainActivity.this, NotificationActivity.class);
+//                startActivity(inn);
+//                return true;
+         /*   case R.id.logout:
                 new android.app.AlertDialog.Builder(this)
                         .setTitle("Exit!")
                         .setMessage("Are you sure you want to signout?")
@@ -405,7 +428,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     }
 
                                 }).setNegativeButton("No", null).show();
-                return true;
+                return true;    */
             default:
                 return super.onOptionsItemSelected(item);
         }

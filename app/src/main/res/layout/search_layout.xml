@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
@@ -17,9 +19,10 @@
         <LinearLayout
             android:weightSum="1"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
+
             android:layout_margin="15dp"
-            android:background="@drawable/pink_sp_border"
+            android:background="@drawable/black_sp_border"
             android:gravity="center">
 
             <EditText
@@ -28,8 +31,9 @@
                 android:layout_width="0dp"
                 android:background="@null"
                 android:singleLine="true"
+
                 android:hint="Search by Name"
-                android:textSize="15dp"
+                android:textSize="12dp"
                 android:layout_marginLeft="10dp"
                 android:clickable="true"
                 android:layout_height="40dp">
@@ -44,10 +48,10 @@
 
                 <ImageView
                     android:id="@+id/imgGo"
-                    android:layout_width="25dp"
+                    android:layout_width="15dp"
                     android:background="@drawable/magnifier"
                     android:clickable="true"
-                    android:layout_height="25dp">
+                    android:layout_height="15dp">
                 </ImageView>
 
 
@@ -60,7 +64,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/header">
 
         <ListView
@@ -69,6 +73,8 @@
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
             android:scrollbars="vertical" />
+
+
     </RelativeLayout>
 
 </RelativeLayout>

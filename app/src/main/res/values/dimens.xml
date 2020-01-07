@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- Font sizes in SP -->
+    <dimen name="small_font">10dp</dimen>
+    <dimen name="big_font">12dp</dimen>
+
+</resources>

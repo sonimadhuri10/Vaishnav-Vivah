@@ -1,12 +1,16 @@
 package com.ziasy.vaishnavvivah.fragment;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,6 +22,7 @@ import com.ziasy.vaishnavvivah.MainActivity;
 import com.ziasy.vaishnavvivah.NetworkManager.APIClient;
 import com.ziasy.vaishnavvivah.NetworkManager.APIInterface;
 import com.ziasy.vaishnavvivah.R;
+import com.ziasy.vaishnavvivah.activity.SearchActivity;
 import com.ziasy.vaishnavvivah.activity.loginActivity;
 import com.ziasy.vaishnavvivah.adapter.ItemArrayAdapter;
 import com.ziasy.vaishnavvivah.adapter.dashAdapter;
@@ -38,12 +43,14 @@ public class dashboard extends Fragment {
     GridView gridview ;
     ConnectionDetector cd;
     SessionManagment sd;
+    TextView searchbar;
     ProgressDialog pd;
     ArrayList<GridModel> al = null;
     dashAdapter dashAdapter ;
     APIInterface apiInterface ;
     Calendar myCalendar;
     int year=0;
+    LinearLayout searchLayout;
 
     @Nullable
     @Override
@@ -51,6 +58,7 @@ public class dashboard extends Fragment {
         View v = inflater.inflate(R.layout.gridlayout, container, false);
 
         gridview = (GridView)v.findViewById(R.id.Gridview);
+        searchbar = v.findViewById(R.id.etSearch1);
         apiInterface = APIClient.getClient().create(APIInterface.class);
         cd = new ConnectionDetector(getActivity());
         sd = new SessionManagment(getActivity());
@@ -59,12 +67,30 @@ public class dashboard extends Fragment {
         pd.setMessage("Please Wait..!");
         myCalendar = Calendar.getInstance();
         al =new ArrayList<>();
+        searchLayout = v.findViewById(R.id.searchlayout);
+        searchLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), SearchActivity.class);
+                startActivity(in);
+            }
+        });
+
+        searchbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getActivity(), SearchActivity.class);
+                startActivity(in);
+            }
+        });
 
        add(sd.getGENDER(),sd.getKEY_ID());
      //  Toast.makeText(getActivity(),sd.getLOGOUT_STATUS(),Toast.LENGTH_SHORT).show();
 
         return v;
     }
+
+
 
   public  void add(String Gender,String id){
           if (!cd.isConnectingToInternet()) {

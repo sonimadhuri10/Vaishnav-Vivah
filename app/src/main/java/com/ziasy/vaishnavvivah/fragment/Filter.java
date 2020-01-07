@@ -81,8 +81,9 @@ public class Filter extends AppCompatActivity implements View.OnClickListener {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Filter profiles");
-
+        getSupportActionBar().setDisplayShowTitleEnabled(false); // hide the current title from the Toolbar
+        //getSupportActionBar().setTitle("");
+        getSupportActionBar().setIcon(R.drawable.logo6);
 
 
         spGotra.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

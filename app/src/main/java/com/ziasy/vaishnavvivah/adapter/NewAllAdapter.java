@@ -1,5 +1,6 @@
 package com.ziasy.vaishnavvivah.adapter;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -43,6 +44,7 @@ public class NewAllAdapter extends ArrayAdapter {
 
     }
 
+    @SuppressLint("WrongViewCast")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder vh = new ViewHolder();
@@ -52,17 +54,16 @@ public class NewAllAdapter extends ArrayAdapter {
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.grid_items, parent, false);
-            vh.tvDelet = (TextView) convertView.findViewById(R.id.tvDelet);
-            vh.tvview = (TextView) convertView.findViewById(R.id.tvView);
+           // vh.tvDelet = (TextView) convertView.findViewById(R.id.tvDelet);
+          //  vh.tvview = (TextView) convertView.findViewById(R.id.tvView);
             vh.icon = (ImageView) convertView.findViewById(R.id.image);
             convertView.setTag(vh);
         } else {
             vh = (ViewHolder) convertView.getTag();
         }
 
-
-        vh.tvDelet.setVisibility(View.GONE);
-        vh.tvview.setVisibility(View.GONE);
+      //  vh.tvDelet.setVisibility(View.GONE);
+      //  vh.tvview.setVisibility(View.GONE);
         Picasso.with(context).load("http://joietouch.com/matrimoney/images/"+lm.img_name).error(R.drawable.man).into(vh.icon);
 
         vh.icon.setOnClickListener(new View.OnClickListener() {

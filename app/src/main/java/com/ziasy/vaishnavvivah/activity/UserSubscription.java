@@ -130,6 +130,12 @@ public class UserSubscription extends AppCompatActivity implements View.OnClickL
         pd.setCancelable(false);
         pd.setMessage("Please wait....");
         apiInterface = APIClient.getClient().create(APIInterface.class);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this, R.array.Prefix, R.layout.myspinner);
+       // adapter.setDropDownViewResource(R.layout.myspinner);
+        spPrefix.setAdapter(adapter);
+
+
 
        date = new DatePickerDialog.OnDateSetListener() {
             @Override

@@ -5,11 +5,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +25,8 @@ import com.ziasy.vaishnavvivah.activity.ViewFulProfile;
 import com.ziasy.vaishnavvivah.activity.checksum;
 import com.ziasy.vaishnavvivah.comman.ConnectionDetector;
 import com.ziasy.vaishnavvivah.comman.SessionManagment;
+import com.ziasy.vaishnavvivah.fragment.FamilyDetailsfragment;
+import com.ziasy.vaishnavvivah.fragment.UserDetailsfragment;
 import com.ziasy.vaishnavvivah.model.Login_model;
 
 import java.util.ArrayList;
@@ -39,6 +44,8 @@ public class dashAdapter extends ArrayAdapter {
     ConnectionDetector cd;
     APIInterface apiInterface ;
     ProgressDialog pd ;
+    LinearLayout colorlayout1,colorlayout2;
+
 
     public dashAdapter(Context context, ArrayList<Login_model.userdetail> al,int year) {
         super(context, R.layout.dash_items, al);
@@ -66,13 +73,27 @@ public class dashAdapter extends ArrayAdapter {
             vh.tvView=(TextView)convertView.findViewById(R.id.tvView);
             vh.tvLike=(TextView)convertView.findViewById(R.id.tvlike);
             vh.icon=(ImageView)convertView.findViewById(R.id.image);
+            vh.tvage = (TextView)convertView. findViewById(R.id.setege);
+            vh.tvrel = (TextView)convertView. findViewById(R.id.setrel);
+            vh.tvloc = (TextView)convertView. findViewById(R.id.setloc);
+
+
             convertView.setTag(vh);
         } else {
             vh =(ViewHolder)convertView.getTag();
         }
 
         vh.tvName.setText(lm.user_name);
+
+        colorlayout1 = convertView.findViewById(R.id.likelayout);
+        colorlayout2 = convertView.findViewById(R.id.likedlayout);
+
+
+
         age = year - Integer.parseInt(lm.dob.substring(0,4));
+        vh.tvage.setText(String.valueOf(age)+" yrs");
+        vh.tvrel.setText(lm.gotra);
+        vh.tvloc.setText(lm.city+","+lm.state);
         vh.tvView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,6 +122,31 @@ public class dashAdapter extends ArrayAdapter {
                 in.putExtra("state",lm.state);
                 in.putExtra("profile",lm.profile_pic);
                 context.startActivity(in);
+
+              /*  Bundle args = new Bundle();
+                args.putString("id",lm.id);
+                args.putString("name",lm.user_name);
+                args.putString("gotra",lm.gotra);
+                args.putString("gender",lm.gender);
+                args.putString("status",lm.marital_status);
+                args.putString("age",String.valueOf(age)+" "+"Years");
+                args.putString("dob",lm.dob.substring(0,10));
+                args.putString("father",lm.father_name);
+                args.putString("mother",lm.mother_name);
+                args.putString("fatherocc",lm.father_occupation);
+                args.putString("motherocc",lm.mother_occupation);
+                args.putString("education",lm.education);
+                args.putString("occupation",lm.occupation);
+                args.putString("income",lm.income);
+                args.putString("mobile",lm.user_mobile);
+                args.putString("email",lm.user_email);
+                args.putString("address",lm.address);
+                args.putString("city",lm.city);
+                args.putString("state",lm.state);
+                args.putString("profile",lm.profile_pic);
+                fu.setArguments(args);
+                fd.setArguments(args);
+*/
 
                /* if(sd.getpAYMENT_STATUS().equals("false")){
                     new android.app.AlertDialog.Builder(context)
@@ -158,11 +204,18 @@ public class dashAdapter extends ArrayAdapter {
 
 
         if(lm.intrest.equals("Yes")){
-            vh.tvLike.setText("Liked");
-            vh.tvLike.setBackgroundColor(Color.RED);
+           colorlayout1.setVisibility(View.GONE);
+           colorlayout2.setVisibility(View.VISIBLE);
+
+           // Drawable d = getResources().getDrawable(R.drawable.rectangleliked);
+           // vh.tvLike.setTextColor(Color.CYAN);
+           //colorlayout1.setBackground(Color.CYAN);
+
         }else{
-            vh.tvLike.setText("Like");
-            vh.tvLike.setBackgroundColor(Color.parseColor("#f27072"));
+            colorlayout1.setVisibility(View.VISIBLE);
+            colorlayout2.setVisibility(View.GONE);
+
+
 
         }
 
@@ -207,7 +260,7 @@ public class dashAdapter extends ArrayAdapter {
 
     class ViewHolder {
         ImageView icon;
-        TextView tvName ,tvView,tvLike;
+        TextView tvName ,tvView,tvLike,tvage,tvrel,tvloc;
     }
 
 }

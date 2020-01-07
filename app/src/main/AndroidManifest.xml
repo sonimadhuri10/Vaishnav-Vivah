@@ -21,6 +21,7 @@
         android:roundIcon="@drawable/icon2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
+
         <activity android:name="com.ziasy.vaishnavvivah.activity.splashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,11 +30,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.checksum"/>
+        <activity android:name=".activity.checksum"
+            android:screenOrientation="portrait"
+            />
 
-         <activity android:name="com.ziasy.vaishnavvivah.MainActivity"
+        <activity android:name="com.ziasy.vaishnavvivah.MainActivity"
              android:screenOrientation="portrait"
-         android:theme="@style/AppTheme"/>
+         android:theme="@style/AppTheme1"/>
 
 
         <activity android:name="com.ziasy.vaishnavvivah.activity.frontActivity"
@@ -77,6 +80,8 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
 
+
+
         <activity android:name="com.ziasy.vaishnavvivah.activity.AboutUs"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
@@ -94,6 +99,11 @@
         <activity android:name=".activity.ViewImageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"/>
+
+        <activity android:name=".activity.swipeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
 
 
         <activity android:name="com.ziasy.vaishnavvivah.activity.NotificationActivity"
